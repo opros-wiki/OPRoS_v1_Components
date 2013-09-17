@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>2e814e59-8bf0-4cee-81e2-6522d36eecc4</id>
+	<name>KITECH_NavigationComp</name>
+	<version>1.0</version>
+	<description>Navigation Component</description>
+	<copyright>
+		<company>
+			<name>KITECH</name>
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<os name="Windows" version="XP" />
+		<library_type>dll</library_type>
+		<library_name>KITECH_NavigationComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>periodic</type>
+		<period>100</period>
+		<priority>5</priority>
+		<instance_creation>singleton</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+  <properties>
+    <property name="StartPositionX" type="double">0</property>
+    <property name="StartPositionY" type="double">0</property>
+    <property name="StartPositionTheta" type="double">0</property>
+  </properties>
+	<data_type_list />
+  <ports>
+    <service_port>
+      <name>NavigationService</name>
+      <description />
+      <type>NavigationService</type>
+      <usage>provided</usage>
+      <reference>NavigationService.xml</reference>
+    </service_port>
+    <service_port>
+      <name>GlobalMapService</name>
+      <description />
+      <type>GlobalMapService</type>
+      <usage>required</usage>
+      <reference>GlobalMapService.xml</reference>
+    </service_port>
+    <service_port>
+      <name>PathPlanningService</name>
+      <description />
+      <type>PathPlanningService</type>
+      <usage>required</usage>
+      <reference>PathPlanningService.xml</reference>
+    </service_port>
+    <service_port>
+      <name>LocalizationService</name>
+      <description />
+      <type>LocalizationService</type>
+      <usage>required</usage>
+      <reference>LocalizationService.xml</reference>
+    </service_port>
+    <service_port>
+      <name>ObstacleAvoidanceService</name>
+      <description />
+      <type>ObstacleAvoidanceService</type>
+      <usage>required</usage>
+      <reference>ObstacleAvoidanceService.xml</reference>
+    </service_port>
+    <service_port>
+      <name>LaserScannerService</name>
+      <description />
+      <type>LaserScannerService</type>
+      <usage>required</usage>
+      <reference>LaserScannerService.xml</reference>
+    </service_port>
+    <service_port>
+      <name>WheelControllerService</name>
+      <description />
+      <type>WheelControllerService</type>
+      <usage>required</usage>
+      <reference>WheelControllerService.xml</reference>
+    </service_port>
+  </ports>
+</component_profile>
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>e46b2f98-2404-4af9-b835-88cb30425a81</id>
+	<name>BatteryManagementSystemComp</name>
+	<version>0.2</version>
+	<copyright>
+		<company>
+			<name>KITECH</name>
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<library_type>dll</library_type>
+		<library_name>BatteryManagementSystemComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>periodic</type>
+		<period>100</period>
+		<priority>5</priority>
+		<instance_creation>multiple</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+	<properties>
+		<property name="APIName" type="string">BatteryManagementSystemAPI</property>
+    <property name="MinimumVoltageLimit" type="double">12.0</property>
+    <property name="MaximumVoltageLimit" type="double">24.0</property>
+    <property name="MinimumCellVoltageLimit" type="double">4.7</property>
+    <property name="MaximumCellVoltageLimit" type="double">3.7</property>
+	</properties>
+	<data_type_list />
+	<ports>
+		<service_port>
+			<name>BatteryManagementSystemService</name>
+			<description />
+			<type>BatteryManagementSystemService</type>
+			<usage>provided</usage>
+			<reference>BatteryManagementSystemService.xml</reference>
+		</service_port>
+		<data_port>
+			<name>voltageData</name>
+			<description />
+			<data_type>double</data_type>
+			<usage>output</usage>
+			<reference />
+			<queueing_policy />
+			<queue_size />
+		</data_port>
+	</ports>
+</component_profile>
+

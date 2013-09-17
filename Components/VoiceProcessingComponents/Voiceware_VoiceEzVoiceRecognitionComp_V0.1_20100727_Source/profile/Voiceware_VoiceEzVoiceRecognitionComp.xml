@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>05b56821-3488-4144-9045-68d2469c2943</id>
+	<name>Voiceware_VoiceEzVoiceRecognitionComp</name>
+	<version>1.0</version>
+	<layout>317,333,250,200</layout>
+	<copyright>
+		<company>
+			<name>KITECH</name>
+			<phone>031-8040-6334</phone>
+			<address>경기도 안산시 상록구 사3동 1271-18</address>
+			<homepage>www.kitech.re.kr</homepage>
+		</company>
+		<license_policy />
+	</copyright>
+	<execution_environment>
+		<library_type>dll</library_type>
+		<library_name>Voiceware_VoiceEzVoiceRecognitionComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>periodic</type>
+		<period>100</period>
+		<priority>5</priority>
+		<instance_creation>singleton</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+  <properties>
+  </properties>
+	<data_type_list />
+	<defined_data_types />
+	<defined_service_types />
+	<ports>
+		<data_port>
+			<name>WordData</name>
+			<description />
+			<data_type>std::string</data_type>
+			<usage>output</usage>
+			<reference />
+			<layout>551,423,96,32</layout>
+		</data_port>
+	</ports>
+</component_profile>
+

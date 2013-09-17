@@ -1,0 +1,6 @@
+; HCILab_PowerSTTVoiceRecComp.def : Declares the module parameters for the DLL.
+
+LIBRARY      "HCILab_PowerSTTVoiceRecComp"
+
+EXPORTS
+    ; Explicit exports can go here

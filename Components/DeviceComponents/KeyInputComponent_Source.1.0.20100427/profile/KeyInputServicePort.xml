@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<service_port_type_profile>
+	<service_port_type>
+		<type_name>AnalogOutputServicePort</type_name>
+		<method name="setParameter" return_type="bool" call_type="blocking">
+			<param index="1">
+				<name>parameter</name>
+				<type>Property</type>
+			</param>
+		</method>
+		<method name="getParameter" return_type="bool" call_type="blocking">
+			<param index="1">
+				<name>*parameter</name>
+				<type>Property</type>
+			</param>
+		</method>
+		<method name="getKeyInput" return_type="int" call_type="blocking">
+		</method>
+	</service_port_type>
+</service_port_type_profile>
+

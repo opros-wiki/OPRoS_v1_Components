@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+  <id>33f12a6a-ec76-4a90-92f3-f1b6a01d6cb7</id>
+  <name>LaserScannerComp</name>
+  <version>0.2</version>
+  <copyright>
+    <company>
+      <name>KITECH</name>
+      <phone />
+      <address />
+      <homepage />
+    </company>
+    <license_policy>OPRoS</license_policy>
+  </copyright>
+  <execution_environment>
+    <library_type>dll</library_type>
+    <library_name>LaserScannerComp.dll</library_name>
+    <impl_language>MSVC C++</impl_language>
+    <compiler>MSVC</compiler>
+    <app_domain />
+    <app_robot />
+  </execution_environment>
+  <execution_semantics>
+    <type>periodic</type>
+    <period>200</period>
+    <priority>5</priority>
+    <instance_creation>multiple</instance_creation>
+    <lifecycle_type>start</lifecycle_type>
+  </execution_semantics>
+  <properties>
+    <property name="APIName" type="string">LaserScannerAPI</property>
+  </properties>
+  <data_type_list />
+  <ports>
+    <service_port>
+      <name>LaserScannerService</name>
+      <description />
+      <type>LaserScannerService</type>
+      <usage>provided</usage>
+      <reference>LaserScannerService.xml</reference>
+    </service_port>
+    <data_port>
+      <name>laserScannerData</name>
+      <description />
+      <data_type>vector&lt;double&gt;</data_type>
+      <usage>output</usage>
+      <reference />
+      <queueing_policy />
+      <queue_size />
+    </data_port>
+  </ports>
+</component_profile>
+

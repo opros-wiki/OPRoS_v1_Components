@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<service_port_type_profile>
+  <service_port_type>
+    <type_name>I2CService</type_name>
+    <method name="SetParameter" return_type="bool" call_type="blocking">
+      <param index="1">
+        <name>parameter</name>
+        <type>Property</type>
+      </param>
+    </method>
+    <method name="GetParameter" return_type="Property" call_type="blocking" />
+    <method name="GetError" return_type="int" call_type="blocking" />
+    <method name="WriteData" return_type="int" call_type="blocking">
+      <param index="1">
+        <name>address</name>
+        <type>unsigned long</type>
+      </param>
+      <param index="2">
+        <name>data</name>
+        <type>vector&lt;unsigned char&gt;</type>
+      </param>
+    </method>
+    <method name="ReadData" return_type="vector&lt;unsigned char&gt;" call_type="blocking">
+      <param index="1">
+        <name>address</name>
+        <type>unsigned long</type>
+      </param>
+      <param index="2">
+        <name>size</name>
+        <type>int</type>
+      </param>
+    </method>
+    <method name="Lock" return_type="bool" call_type="blocking" />
+    <method name="Unlock" return_type="bool" call_type="blocking" />
+  </service_port_type>
+</service_port_type_profile>
+

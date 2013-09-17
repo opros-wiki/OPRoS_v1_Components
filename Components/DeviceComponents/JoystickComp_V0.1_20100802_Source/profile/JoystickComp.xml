@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>cb6dc969-9c23-40b1-9fe2-44796126dc9f</id>
+	<name>JoystickComp</name>
+	<version>0.1</version>
+	<copyright>
+		<company>
+			<name>KITECH</name>
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<library_type>dll</library_type>
+		<library_name>JoystickComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>periodic</type>
+		<period>100</period>
+		<priority>5</priority>
+		<instance_creation>multiple</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+	<properties />
+	<data_type_list />
+	<ports>
+		<service_port>
+			<name>JoystickService</name>
+			<description />
+			<type>JoystickService</type>
+			<usage>provided</usage>
+			<reference>JoystickService.xml</reference>
+		</service_port>
+		<data_port>
+			<name>joystickData</name>
+			<description />
+			<data_type>JoystickData</data_type>
+			<usage>output</usage>
+			<reference />
+			<queueing_policy />
+			<queue_size />
+		</data_port>
+	</ports>
+</component_profile>
+

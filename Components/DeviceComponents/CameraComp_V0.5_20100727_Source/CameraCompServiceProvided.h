@@ -1,0 +1,126 @@
+#ifndef _CameraService_PROVIDED_PORT_H
+#define _CameraService_PROVIDED_PORT_H
+
+#include <OPRoSTypes.h>
+#include <InputDataPort.h>
+#include <OutputDataPort.h>
+#include <InputEventPort.h>
+#include <OutputEventPort.h>
+#include <ProvidedServicePort.h>
+#include <RequiredServicePort.h>
+#include <ProvidedMethod.h>
+#include <RequiredMethod.h>
+
+/*
+ * ICameraService
+ *
+ * The comonent inherits this class and implements methods. 
+*/
+class ICameraService
+{
+public:
+	virtual bool SetParameter(Property parameter)=0;
+	virtual Property GetParameter()=0;
+	virtual int GetError()=0;
+	virtual vector<unsigned char> GetImage()=0;
+};
+
+/*
+ * 
+ * CameraService : public ProvidedServicePort
+ *
+ */
+class CameraServiceProvided : public ProvidedServicePort, public ICameraService
+{
+protected:
+	ICameraService *pcom;
+
+	typedef ProvidedMethod<bool> SetParameterFuncType;
+	SetParameterFuncType *SetParameterFunc;
+
+	typedef ProvidedMethod<Property> GetParameterFuncType;
+	GetParameterFuncType *GetParameterFunc;
+
+	typedef ProvidedMethod<int> GetErrorFuncType;
+	GetErrorFuncType *GetErrorFunc;
+
+	typedef ProvidedMethod<vector<unsigned char> > GetImageFuncType;
+	GetImageFuncType *GetImageFunc;
+
+
+public: // default method
+	virtual bool SetParameter(Property parameter)
+	{
+		assert(SetParameterFunc != NULL);
+
+		return (*SetParameterFunc)(parameter);
+	}
+
+	virtual Property GetParameter()
+	{
+		assert(GetParameterFunc != NULL);
+
+		return (*GetParameterFunc)();
+	}
+
+	virtual int GetError()
+	{
+		assert(GetErrorFunc != NULL);
+
+		return (*GetErrorFunc)();
+	}
+
+	virtual vector<unsigned char> GetImage()
+	{
+		assert(GetImageFunc != NULL);
+
+		return (*GetImageFunc)();
+	}
+
+public:
+    //
+    // Constructor
+    //
+	CameraServiceProvided(ICameraService *fn)
+	{
+		pcom = fn;
+
+		SetParameterFunc = NULL;
+		GetParameterFunc = NULL;
+		GetErrorFunc = NULL;
+		GetImageFunc = NULL;
+
+		setup();
+	}
+
+    // generated setup function
+    virtual void setup()
+    {
+		Method *ptr_method;
+
+		ptr_method = makeProvidedMethod(&ICameraService::SetParameter,pcom,"SetParameter");
+		assert(ptr_method != NULL);
+		addMethod("SetParameter",ptr_method);
+		SetParameterFunc = reinterpret_cast<SetParameterFuncType *>(ptr_method);
+		ptr_method = NULL;
+
+		ptr_method = makeProvidedMethod(&ICameraService::GetParameter,pcom,"GetParameter");
+		assert(ptr_method != NULL);
+		addMethod("GetParameter",ptr_method);
+		GetParameterFunc = reinterpret_cast<GetParameterFuncType *>(ptr_method);
+		ptr_method = NULL;
+
+		ptr_method = makeProvidedMethod(&ICameraService::GetError,pcom,"GetError");
+		assert(ptr_method != NULL);
+		addMethod("GetError",ptr_method);
+		GetErrorFunc = reinterpret_cast<GetErrorFuncType *>(ptr_method);
+		ptr_method = NULL;
+
+		ptr_method = makeProvidedMethod(&ICameraService::GetImage,pcom,"GetImage");
+		assert(ptr_method != NULL);
+		addMethod("GetImage",ptr_method);
+		GetImageFunc = reinterpret_cast<GetImageFuncType *>(ptr_method);
+		ptr_method = NULL;
+    }
+};
+#endif

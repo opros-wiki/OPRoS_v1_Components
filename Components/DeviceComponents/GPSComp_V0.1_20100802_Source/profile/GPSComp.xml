@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>259b3658-cb42-4b62-aa47-45d4135aedc9</id>
+	<name>GPSComp</name>
+	<version>0.1</version>
+	<copyright>
+		<company>
+			<name>KITECH</name>
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<library_type>dll</library_type>
+		<library_name>GPSComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>periodic</type>
+		<period>100</period>
+		<priority>5</priority>
+		<instance_creation>multiple</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+  <properties>
+    <property name="APIName" type="string">GPSAPI</property>
+  </properties>
+	<data_type_list />
+	<ports>
+		<service_port>
+			<name>GPSService</name>
+			<description />
+			<type>GPSService</type>
+			<usage>provided</usage>
+			<reference>GPSService.xml</reference>
+		</service_port>
+		<data_port>
+			<name>gpsData</name>
+			<description />
+			<data_type>GPSData</data_type>
+			<usage>output</usage>
+			<reference />
+			<queueing_policy />
+			<queue_size />
+		</data_port>
+	</ports>
+</component_profile>
+

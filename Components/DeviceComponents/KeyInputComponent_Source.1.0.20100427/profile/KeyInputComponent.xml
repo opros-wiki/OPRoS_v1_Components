@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>622d780b-dd11-47bd-9434-27cdff2da64b</id>
+	<name>KeyInputComponent</name>
+	<version>0.1</version>
+	<copyright>
+		<company>
+			<name>KITECH</name>
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<library_type>dll</library_type>
+		<library_name>KeyInputComponent.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>periodic</type>
+		<period>100</period>
+		<priority>5</priority>
+		<instance_creation>multiple</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+	<properties>
+	</properties>
+	<data_type_list />
+	<ports>
+		<service_port>
+			<name>KeyInputServicePort</name>
+			<description />
+			<type>KeyInputServicePort</type>
+			<usage>provided</usage>
+			<reference>KeyInputServicePort.xml</reference>
+		</service_port>
+	</ports>
+</component_profile>
+

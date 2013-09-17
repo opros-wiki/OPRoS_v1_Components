@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>aecaefb2-bcfe-4458-8745-815efb881f14</id>
+	<name>UARTComp</name>
+	<version>0.2</version>
+	<copyright>
+		<company>
+			<name>KITECH</name>
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<library_type>dll</library_type>
+		<library_name>UARTComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>passive</type>
+		<period />
+		<priority>5</priority>
+		<instance_creation>multiple</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+	<properties>
+		<property name="APIName" type="string">UARTAPIName</property>
+    <property name="PortName" type="string">COM1</property>
+    <property name="TimeOut" type="int">100</property>
+    <property name="BaudRate" type="int">115200</property>
+    <property name="DataBits" type="int">8</property>
+    <property name="StopBits" type="int">0</property>
+    <property name="Parity" type="int">0</property>
+    <property name="FlowControl" type="int">0</property>
+	</properties>
+	<data_type_list />
+	<ports>
+		<service_port>
+			<name>UARTService</name>
+			<description />
+			<type>UARTService</type>
+			<usage>provided</usage>
+			<reference>UARTService.xml</reference>
+		</service_port>
+	</ports>
+</component_profile>
+

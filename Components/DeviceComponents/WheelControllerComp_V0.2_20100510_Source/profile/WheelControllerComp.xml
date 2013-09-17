@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+  <id>d04f169f-4f74-4887-b91a-e179ef818bcb</id>
+  <name>WheelControllerComp</name>
+  <version>0.2</version>
+  <copyright>
+    <company>
+      <name>KITECH</name>
+      <phone />
+      <address />
+      <homepage />
+    </company>
+    <license_policy>OPRoS</license_policy>
+  </copyright>
+  <execution_environment>
+    <library_type>dll</library_type>
+    <library_name>WheelControllerComp.dll</library_name>
+    <impl_language>MSVC C++</impl_language>
+    <compiler>MSVC</compiler>
+    <app_domain />
+    <app_robot />
+  </execution_environment>
+  <execution_semantics>
+    <type>periodic</type>
+    <period>100</period>
+    <priority>5</priority>
+    <instance_creation>multiple</instance_creation>
+    <lifecycle_type>start</lifecycle_type>
+  </execution_semantics>
+  <properties>
+    <property name="APIName" type="string">WheelControllerAPI</property>
+    <property name="WheelDiameter" type="double">0.150</property>
+    <property name="AxleDistance" type="double">0.385</property>
+    <property name="VarianceDistance" type="double">0.10</property>
+    <property name="VarianceDirection" type="double">10.0</property>
+    <property name="SafeRadius" type="double">0.25</property>
+    <property name="MaximumVelocity" type="double">0.5</property>
+    <property name="Acceleration" type="double">1.0</property>
+  </properties>
+  <data_type_list />
+  <ports>
+    <service_port>
+      <name>WheelControllerService</name>
+      <description />
+      <type>WheelControllerService</type>
+      <usage>provided</usage>
+      <reference>WheelControllerService.xml</reference>
+    </service_port>
+    <data_port>
+      <name>wheelControllerVelocity</name>
+      <description />
+      <data_type>WheelControllerVelocity</data_type>
+      <usage>input</usage>
+      <reference />
+      <queueing_policy>LAST</queueing_policy>
+      <queue_size>1</queue_size>
+    </data_port>
+  </ports>
+</component_profile>

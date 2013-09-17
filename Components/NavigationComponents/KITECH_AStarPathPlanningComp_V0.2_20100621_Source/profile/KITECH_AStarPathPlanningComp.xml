@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>d335200f-2bb5-4688-93c1-bf1576faa408</id>
+	<name>KITECH_AStarPathPlanningComp</name>
+	<version>1.0</version>
+	<description>AStar Path Planning Component</description>
+	<copyright>
+		<company>
+			<name>KITECH</name>
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<os name="Windows" version="XP" />
+		<library_type>dll</library_type>
+		<library_name>KITECH_AStarPathPlanningComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>passive</type>
+		<period />
+		<priority>5</priority>
+		<instance_creation>multiple</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+	<properties />
+	<data_type_list />
+	<ports>
+		<service_port>
+			<name>PathPlanningCompService</name>
+			<description />
+			<type>PathPlanningCompService</type>
+			<usage>provided</usage>
+			<reference>PathPlanningCompService.xml</reference>
+		</service_port>
+    <service_port>
+      <name>GlobalMapCompService</name>
+      <description />
+      <type>GlobalMapCompService</type>
+      <usage>required</usage>
+      <reference>GlobalMapCompService.xml</reference>
+    </service_port>
+  </ports>
+</component_profile>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<service_port_type_profile>
+	<service_port_type>
+		<type_name>TouchSensorService</type_name>
+		<method name="SetParameter" return_type="bool" call_type="blocking" />
+		<method name="GetParameter" return_type="Property" call_type="blocking" />
+		<method name="GetError" return_type="int" call_type="blocking" />
+		<method name="GetTouchSensorData" return_type="vector&lt;bool&gt;" call_type="blocking" />
+	</service_port_type>
+</service_port_type_profile>
+

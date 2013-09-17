@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>6f85bb02-c194-4f41-946e-f1a17deb6923</id>
+	<name>SpeechComp</name>
+	<version>0.2</version>
+	<copyright>
+		<company>
+			<name />
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<library_type>dll</library_type>
+		<library_name>SpeechComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>passive</type>
+		<period />
+		<priority>5</priority>
+		<instance_creation>multiple</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+	<properties>
+		<property name="APIName" type="string">SpeechAPI</property>
+	</properties>
+	<data_type_list />
+	<ports>
+		<service_port>
+			<name>SpeechService</name>
+			<description />
+			<type>SpeechService</type>
+			<usage>provided</usage>
+			<reference>SpeechService.xml</reference>
+		</service_port>
+	</ports>
+</component_profile>
+

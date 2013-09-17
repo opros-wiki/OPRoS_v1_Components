@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+  <id>20801517-ca97-464a-a17a-e086618945b1</id>
+  <name>ManipulatorComp</name>
+  <version>0.2</version>
+  <copyright>
+    <company>
+      <name>KITECH</name>
+      <phone />
+      <address />
+      <homepage />
+    </company>
+    <license_policy>OPRoS</license_policy>
+  </copyright>
+  <execution_environment>
+    <library_type>dll</library_type>
+    <library_name>ManipulatorComp.dll</library_name>
+    <impl_language>MSVC C++</impl_language>
+    <compiler>MSVC</compiler>
+    <app_domain />
+    <app_robot />
+  </execution_environment>
+  <execution_semantics>
+    <type>passive</type>
+    <period />
+    <priority>5</priority>
+    <instance_creation>multiple</instance_creation>
+    <lifecycle_type>start</lifecycle_type>
+  </execution_semantics>
+  <properties>
+    <property name="DllName" type="string">ManipulatorAPI</property>
+    <property name="Size" type="int">1</property>
+    <property name="PowerUnit1" type="int">0</property>
+    <property name="MaximumPower1" type="double">1.0</property>
+    <property name="Type1" type="int">0</property>
+    <property name="MaximumVelocity1" type="double">1.0</property>
+    <property name="Acceleration1" type="double">1.0</property>
+    <property name="MinimumPositionLimit1" type="double">-1.0</property>
+    <property name="MaximumPositionLimit1" type="double">1.0</property>
+  </properties>
+  <data_type_list />
+  <ports>
+    <service_port>
+      <name>ManipulatorService</name>
+      <description />
+      <type>ManipulatorService</type>
+      <usage>provided</usage>
+      <reference>ManipulatorService.xml</reference>
+    </service_port>
+  </ports>
+</component_profile>
+

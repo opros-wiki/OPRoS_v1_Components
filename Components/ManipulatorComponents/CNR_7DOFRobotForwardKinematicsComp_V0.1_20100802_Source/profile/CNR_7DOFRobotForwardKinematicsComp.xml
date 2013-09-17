@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>f70eb773-995c-498e-86b8-572371bda0bd</id>
+	<name>CNR_7DOFRobotForwardKinematicsComp</name>
+	<version>0.2</version>
+	<copyright>
+		<company>
+			<name>CNR</name>
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<library_type>dll</library_type>
+		<library_name>CNR_7DOFRobotForwardKinematicsComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>passive</type>
+		<period />
+		<priority>5</priority>
+		<instance_creation>multiple</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+	<properties>
+    <property name="JointCount" type="int">7</property>
+
+    <property name="JointType0" type="int">1</property>
+    <property name="JointAxis0" type="int">2</property>
+    <property name="X0" type="double">0.0</property>
+    <property name="Y0" type="double">0.0</property>
+    <property name="Z0" type="double">0.3</property>
+    <property name="Phi0" type="double">0.0</property>
+    <property name="Theta0" type="double">0.0</property>
+    <property name="Psi0" type="double">0.0</property>
+
+    <property name="JointType1" type="int">1</property>
+    <property name="JointAxis1" type="int">1</property>
+    <property name="X1" type="double">0.0</property>
+    <property name="Y1" type="double">0.0</property>
+    <property name="Z1" type="double">0.3</property>
+    <property name="Phi1" type="double">0.0</property>
+    <property name="Theta1" type="double">0.0</property>
+    <property name="Psi1" type="double">0.0</property>
+
+    <property name="JointType2" type="int">1</property>
+    <property name="JointAxis2" type="int">0</property>
+    <property name="X2" type="double">0.0</property>
+    <property name="Y2" type="double">0.0</property>
+    <property name="Z2" type="double">0.3</property>
+    <property name="Phi2" type="double">0.0</property>
+    <property name="Theta2" type="double">0.0</property>
+    <property name="Psi2" type="double">0.0</property>
+
+    <property name="JointType3" type="int">1</property>
+    <property name="JointAxis3" type="int">1</property>
+    <property name="X3" type="double">0.0</property>
+    <property name="Y3" type="double">0.0</property>
+    <property name="Z3" type="double">0.3</property>
+    <property name="Phi3" type="double">0.0</property>
+    <property name="Theta3" type="double">0.0</property>
+    <property name="Psi3" type="double">0.0</property>
+
+    <property name="JointType4" type="int">1</property>
+    <property name="JointAxis4" type="int">0</property>
+    <property name="X4" type="double">0.0</property>
+    <property name="Y4" type="double">0.0</property>
+    <property name="Z4" type="double">0.3</property>
+    <property name="Phi4" type="double">0.0</property>
+    <property name="Theta4" type="double">0.0</property>
+    <property name="Psi4" type="double">0.0</property>
+
+    <property name="JointType5" type="int">1</property>
+    <property name="JointAxis5" type="int">1</property>
+    <property name="X5" type="double">0.0</property>
+    <property name="Y5" type="double">0.0</property>
+    <property name="Z5" type="double">0.3</property>
+    <property name="Phi5" type="double">0.0</property>
+    <property name="Theta5" type="double">0.0</property>
+    <property name="Psi5" type="double">0.0</property>
+
+    <property name="JointType6" type="int">1</property>
+    <property name="JointAxis6" type="int">0</property>
+    <property name="X6" type="double">0.0</property>
+    <property name="Y6" type="double">0.0</property>
+    <property name="Z6" type="double">0.3</property>
+    <property name="Phi6" type="double">0.0</property>
+    <property name="Theta6" type="double">0.0</property>
+    <property name="Psi6" type="double">0.0</property>
+	</properties>
+	<data_type_list />
+	<ports>
+		<service_port>
+			<name>InverseKinematicsService</name>
+			<description />
+			<type>InverseKinematicsService</type>
+			<usage>provided</usage>
+			<reference>InverseKinematicsService.xml</reference>
+		</service_port>
+	</ports>
+</component_profile>
+
