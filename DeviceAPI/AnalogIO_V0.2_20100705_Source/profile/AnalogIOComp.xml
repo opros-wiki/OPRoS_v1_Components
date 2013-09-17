@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>a1a0de1c-a144-47c2-a7e6-da1bc146de37</id>
+	<name>AnalogIOComp</name>
+	<version>0.2</version>
+	<copyright>
+		<company>
+			<name>KITECH</name>
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<library_type>dll</library_type>
+		<library_name>AnalogIOComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>periodic</type>
+		<period>100</period>
+		<priority>5</priority>
+		<instance_creation>multiple</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+	<properties>
+		<property name="AnalogInputPortSize" type="int">1</property>
+		<property name="AnalogOutputPortSize" type="int">1</property>
+		<property name="MinimumAnalogValue" type="double">0.0</property>
+		<property name="MaximumAnalogValue" type="double">1.0</property>
+	</properties>
+	<data_type_list />
+	<ports>
+		<service_port>
+			<name>AnalogIOService</name>
+			<description />
+			<type>AnalogIOService</type>
+			<usage>provided</usage>
+			<reference>AnalogIOService.xml</reference>
+		</service_port>
+		<data_port>
+			<name>analogInputData</name>
+			<description />
+			<data_type>vector&lt;double&gt;</data_type>
+			<usage>output</usage>
+			<reference />
+			<queueing_policy />
+			<queue_size />
+		</data_port>
+		<data_port>
+			<name>analogOutputData</name>
+			<description />
+			<data_type>vector&lt;double&gt;</data_type>
+			<usage>input</usage>
+			<reference />
+			<queueing_policy>LAST</queueing_policy>
+			<queue_size>1</queue_size>
+		</data_port>
+	</ports>
+</component_profile>
+

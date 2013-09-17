@@ -1,0 +1,421 @@
+#pragma once
+
+#define EPOS_DEVICE_TYPE										0x1000,	0x00  
+
+// 0x1001: Error Register
+// bit 7: Motion error
+// bit 6: Reserved (always 0)
+// bit 5: Device profile specific
+// bit 4: Communication error
+// bit 3: Temperature error
+// bit 2: Voltage error
+// bit 1: Current error
+// bit 0: Generic error
+#define EPOS_ERROR_REGISTER										0x1001,	0x00  
+
+#define EPOS_VENDOR_ID											0x1018,	0x01  
+#define EPOS_PRODUCT_CODE										0x1018,	0x02  
+
+#define EPOS_ERROR_HISTORY_NUMBER_OF_ERRORS						0x1003,	0x00  
+#define EPOS_ERROR_HISTORY_1									0x1003,	0x01  
+#define EPOS_ERROR_HISTORY_2									0x1003,	0x02  
+#define EPOS_ERROR_HISTORY_3									0x1003,	0x03  
+#define EPOS_ERROR_HISTORY_4									0x1003,	0x04  
+#define EPOS_ERROR_HISTORY_5									0x1003,	0x05  
+
+#define EPOS_COB_ID_SYNC_MESSAGE								0x1005,	0x00  
+
+#define EPOS_MANUFACTURER_DEVICE_NAME							0x1008,	0x00  
+
+#define EPOS_GUARD_TIME											0x100C,	0x00  
+
+#define EPOS_LIFE_TIME_FACTOR									0x100D,	0x00  
+
+#define EPOS_LARGEST_SUBINDEX_SUPPORTED_0						0x1010,	0x00  
+#define EPOS_SAVE_ALL_PARAMETERS								0x1010,	0x01  
+				
+#define EPOS_LARGEST_SUBINDEX_SUPPORTED_1						0x1011,	0x00  
+#define EPOS_RESTORE_ALL_DEFAULT_PARAMETERS						0x1011,	0x01  
+#define EPOS_RESTORE_DEFAULT_PDO_COB_IDS						0x1011,	0x05  
+
+#define EPOS_COB_ID_EMERGENCY_OBJECT							0x1014,	0x00  
+				
+#define EPOS_PRODUCER_HEARTBEAT_TIME							0x1017,	0x00  
+				
+#define EPOS_SDO_COB_ID_CLINENT_SEVER_RX						0x1200,	0x01  
+#define EPOS_SDO_COB_ID_CLINENT_SEVER_TX						0x1200,	0x02  
+				
+#define EPOS_LARGEST_SUBINDEX_SUPPORTED_2						0x1400,	0x00  
+#define EPOS_COB_ID_USED_BY_RXPDO_1								0x1400,	0x01  
+#define EPOS_TRANSMISSION_TYPE_RX0								0x1400,	0x02  
+
+#define EPOS_LARGEST_SUBINDEX_SUPPORTED_3						0x1401,	0x00  
+#define EPOS_COB_ID_USED_BY_RXPDO_2								0x1401,	0x01  
+#define EPOS_TRANSMISSION_TYPE_RX1								0x1401,	0x02  
+
+#define EPOS_LARGEST_SUBINDEX_SUPPORTED_4						0x1402,	0x00  
+#define EPOS_COB_ID_USED_BY_RXPDO_3								0x1402,	0x01  
+#define EPOS_TRANSMISSION_TYPE_RX2								0x1402,	0x02  
+
+#define EPOS_LARGEST_SUBINDEX_SUPPORTED_5						0x1403,	0x00  
+#define EPOS_COB_ID_USED_BY_RXPDO_4								0x1403,	0x01  
+#define EPOS_TRANSMISSION_TYPE_RX3								0x1403,	0x02  
+
+#define EPOS_NUMBER_OF_MAPPED_APPLICATION_OBJECTS_IN_RXPDO_1	0x1600,	0x00  
+#define EPOS_1ST_MAPPED_OBJECT_IN_RXPDO_1						0x1600,	0x01  
+#define EPOS_2ND_MAPPED_OBJECT_IN_RXPDO_1						0x1600,	0x02  
+#define EPOS_3RD_MAPPED_OBJECT_IN_RXPDO_1						0x1600,	0x03  
+#define EPOS_4TH_MAPPED_OBJECT_IN_RXPDO_1						0x1600,	0x04  
+#define EPOS_5TH_MAPPED_OBJECT_IN_RXPDO_1						0x1600,	0x05  
+#define EPOS_6TH_MAPPED_OBJECT_IN_RXPDO_1						0x1600,	0x05  
+#define EPOS_7TH_MAPPED_OBJECT_IN_RXPDO_1						0x1600,	0x06  
+#define EPOS_8TH_MAPPED_OBJECT_IN_RXPDO_1						0x1600,	0x07  
+
+#define EPOS_NUMBER_OF_MAPPED_APPLICATION_OBJECTS_IN_RXPDO_2	0x1601,	0x00  
+#define EPOS_1ST_MAPPED_OBJECT_IN_RXPDO_2						0x1601,	0x01  
+#define EPOS_2ND_MAPPED_OBJECT_IN_RXPDO_2						0x1601,	0x02  
+#define EPOS_3RD_MAPPED_OBJECT_IN_RXPDO_2						0x1601,	0x03  
+#define EPOS_4TH_MAPPED_OBJECT_IN_RXPDO_2						0x1601,	0x04  
+#define EPOS_5TH_MAPPED_OBJECT_IN_RXPDO_2						0x1601,	0x05  
+#define EPOS_6TH_MAPPED_OBJECT_IN_RXPDO_2						0x1601,	0x05  
+#define EPOS_7TH_MAPPED_OBJECT_IN_RXPDO_2						0x1601,	0x06  
+#define EPOS_8TH_MAPPED_OBJECT_IN_RXPDO_2						0x1601,	0x07  
+
+#define EPOS_NUMBER_OF_MAPPED_APPLICATION_OBJECTS_IN_RXPDO_3	0x1602,	0x00  
+#define EPOS_1ST_MAPPED_OBJECT_IN_RXPDO_3						0x1602,	0x01  
+#define EPOS_2ND_MAPPED_OBJECT_IN_RXPDO_3						0x1602,	0x02  
+#define EPOS_3RD_MAPPED_OBJECT_IN_RXPDO_3						0x1602,	0x03  
+#define EPOS_4TH_MAPPED_OBJECT_IN_RXPDO_3						0x1602,	0x04  
+#define EPOS_5TH_MAPPED_OBJECT_IN_RXPDO_3						0x1602,	0x05  
+#define EPOS_6TH_MAPPED_OBJECT_IN_RXPDO_3						0x1602,	0x05  
+#define EPOS_7TH_MAPPED_OBJECT_IN_RXPDO_3						0x1602,	0x06  
+#define EPOS_8TH_MAPPED_OBJECT_IN_RXPDO_3						0x1602,	0x07  
+
+#define EPOS_NUMBER_OF_MAPPED_APPLICATION_OBJECTS_IN_RXPDO_4	0x1603,	0x00  
+#define EPOS_1ST_MAPPED_OBJECT_IN_RXPDO_4						0x1603,	0x01  
+#define EPOS_2ND_MAPPED_OBJECT_IN_RXPDO_4						0x1603,	0x02  
+#define EPOS_3RD_MAPPED_OBJECT_IN_RXPDO_4						0x1603,	0x03  
+#define EPOS_4TH_MAPPED_OBJECT_IN_RXPDO_4						0x1603,	0x04  
+#define EPOS_5TH_MAPPED_OBJECT_IN_RXPDO_4						0x1603,	0x05  
+#define EPOS_6TH_MAPPED_OBJECT_IN_RXPDO_4						0x1603,	0x05  
+#define EPOS_7TH_MAPPED_OBJECT_IN_RXPDO_4						0x1603,	0x06  
+#define EPOS_8TH_MAPPED_OBJECT_IN_RXPDO_4						0x1603,	0x07  
+
+#define EPOS_LARGEST_SUBINDEX_SUPPORTED_6						0x1800,	0x00  
+#define EPOS_COB_ID_USED_BY_TXPDO_1								0x1800,	0x01  
+#define EPOS_TRANSMISSION_TYPE_TX0								0x1800,	0x02  
+#define EPOS_INHIBIT_TIME_0										0x1800,	0x03  
+
+#define EPOS_LARGEST_SUBINDEX_SUPPORTED_7						0x1801,	0x00  
+#define EPOS_COB_ID_USED_BY_TXPDO_2								0x1801,	0x01  
+#define EPOS_TRANSMISSION_TYPE_TX1								0x1801,	0x02  
+#define EPOS_INHIBIT_TIME_1										0x1801,	0x03  
+
+#define EPOS_LARGEST SUBINDEX_SUPPORTED_8						0x1802,	0x00  
+#define EPOS_COB_ID_USED_BY_TXPDO_3								0x1802,	0x01  
+#define EPOS_TRANSMISSION_TYPE_TX2								0x1802,	0x02  
+#define EPOS_INHIBIT_TIME_2										0x1802,	0x03  
+
+#define EPOS_LARGEST_SUBINDEX_SUPPORTED_9						0x1803,	0x00  
+#define EPOS_COB_ID_USED_BY_TXPDO_4								0x1803,	0x01  
+#define EPOS_TRANSMISSION_YPE_TX3								0x1803,	0x02  
+#define EPOS_INHIBIT_TIME_3										0x1803,	0x03  
+
+#define EPOS_NUMBER_OF_MAPPED_APPLICATION_OBJECTS_IN_TXPDO_1	0x1A00,	0x00  
+#define EPOS_1ST_MAPPED_OBJECT_IN_TXPDO_1						0x1A00,	0x01  
+#define EPOS_2ND_MAPPED_OBJECT_IN_TXPDO_1						0x1A00,	0x02  
+#define EPOS_3RD_MAPPED_OBJECT_IN_TXPDO_1						0x1A00,	0x03  
+#define EPOS_4TH_MAPPED_OBJECT_IN_TXPDO_1						0x1A00,	0x04  
+#define EPOS_5TH_MAPPED_OBJECT_IN_TXPDO_1						0x1A00,	0x05  
+#define EPOS_6TH_MAPPED_OBJECT_IN_TXPDO_1						0x1A00,	0x05  
+#define EPOS_7TH_MAPPED_OBJECT_IN_TXPDO_1						0x1A00,	0x06  
+#define EPOS_8TH_MAPPED_OBJECT_IN_TXPDO_1						0x1A00,	0x07  
+
+#define EPOS_NUMBER_OF_MAPPED_APPLICATION_OBJECTS_IN_TXPDO_2	0x1A01,	0x00  
+#define EPOS_1ST_MAPPED_OBJECT_IN_TXPDO_2						0x1A01,	0x01  
+#define EPOS_2ND_MAPPED_OBJECT_IN_TXPDO_2						0x1A01,	0x02  
+#define EPOS_3RD_MAPPED_OBJECT_IN_TXPDO_2						0x1A01,	0x03  
+#define EPOS_4TH_MAPPED_OBJECT_IN_TXPDO_2						0x1A01,	0x04  
+#define EPOS_5TH_MAPPED_OBJECT_IN_TXPDO_2						0x1A01,	0x05  
+#define EPOS_6TH_MAPPED_OBJECT_IN_TXPDO_2						0x1A01,	0x05  
+#define EPOS_7TH_MAPPED_OBJECT_IN_TXPDO_2						0x1A01,	0x06  
+#define EPOS_8TH_MAPPED_OBJECT_IN_TXPDO_2						0x1A01,	0x07  
+
+#define EPOS_NUMBER_OF_MAPPED_APPLICATION_OBJECTS_IN_TXPDO_3	0x1A02,	0x00  
+#define EPOS_1ST_MAPPED_OBJECT_IN_TXPDO_3						0x1A02,	0x01  
+#define EPOS_2ND_MAPPED_OBJECT_IN_TXPDO_3						0x1A02,	0x02  
+#define EPOS_3RD_MAPPED_OBJECT_IN_TXPDO_3						0x1A02,	0x03  
+#define EPOS_4TH_MAPPED_OBJECT_IN_TXPDO_3						0x1A02,	0x04  
+#define EPOS_5TH_MAPPED_OBJECT_IN_TXPDO_3						0x1A02,	0x05  
+#define EPOS_6TH_MAPPED_OBJECT_IN_TXPDO_3						0x1A02,	0x05  
+#define EPOS_7TH_MAPPED_OBJECT_IN_TXPDO_3						0x1A02,	0x06  
+#define EPOS_8TH_MAPPED_OBJECT_IN_TXPDO_3						0x1A02,	0x07  
+
+#define EPOS_NUMBER_OF_MAPPED_APPLICATION_OBJECTS_IN_TXPDO_4	0x1A03,	0x00  
+#define EPOS_1ST_MAPPED_OBJECT_IN_TXPDO_4						0x1A03,	0x01  
+#define EPOS_2ND_MAPPED_OBJECT_IN_TXPDO_4						0x1A03,	0x02  
+#define EPOS_3RD_MAPPED_OBJECT_IN_TXPDO_4						0x1A03,	0x03  
+#define EPOS_4TH_MAPPED_OBJECT_IN_TXPDO_4						0x1A03,	0x04  
+#define EPOS_5TH_MAPPED_OBJECT_IN_TXPDO_4						0x1A03,	0x05  
+#define EPOS_6TH_MAPPED_OBJECT_IN_TXPDO_4						0x1A03,	0x05  
+#define EPOS_7TH_MAPPED_OBJECT_IN_TXPDO_4						0x1A03,	0x06  
+#define EPOS_8TH_MAPPED_OBJECT_IN_TXPDO_4						0x1A03,	0x07  
+
+// 0x6040: Device control commands			PPM							PVM							HMM
+// bit 8 Operation mode specific			Halt						Halt						Halt
+// bit 7 Fault reset
+// bit 6 Operation mode specific			Abs/rel						reserved					reserved
+// bit 5 Operation mode specific			Change set immediately		reserved					reserved
+// bit 4 Operation mode specific			New set-point				reserved					Homing operation start
+// bit 3 Enable operation
+// bit 2 Quick stop
+// bit 1 Enable voltage
+// bit 0 Switch on
+#define EPOS_CONTROL_WORD										0x6040,	0x00  
+	#define	EPOS_POS_CTRL_ABS									0x001F
+	#define	EPOS_POS_CTRL_ABS_IMM								0x003F
+	#define	EPOS_POS_CTRL_REL									0x005F
+	#define	EPOS_POS_CTRL_REL_IMM								0x007F
+
+	#define	EPOS_CTRL_SHUTDOWN									0x0006	// Shutdown				0xxx x110
+	#define	EPOS_CTRL_SWITCH_ON									0x0007	// Switch On			0xxx x111
+	#define	EPOS_CTRL_DISABLE_VOLTAGE							0X0000	// Disable Voltage		0xxx xx0x
+	#define	EPOS_CTRL_QUICK_STOP								0x000B	// Quick Stop			0xxx x01x
+	#define	EPOS_CTRL_DISABLE_OPERATION							0x0007	// Disable Operation	0xxx 0111
+	#define	EPOS_CTRL_ENABLE_OPERATION							0x000F	// Enable Operation		0xxx 1111
+	#define	EPOS_CTRL_FAULT_RESET								0x0080	// Fault Reset			0xxx xxxx -> 1xxx xxxx
+	#define	EPOS_CTRL_START_PRO_VEL								0x000F
+	#define	EPOS_CTRL_START_HOMING								0x001F
+	#define	EPOS_CTRL_STOP_POS									0x010F
+	#define	EPOS_CTRL_HALT_PRO_VEL								0x010F
+	#define	EPOS_CTRL_HALT_HOMING								0x011F
+
+// 0x6041: Status											PPM						PVM						HMM
+// 0x8000	 bit15 Position referenced to home position
+// 0x4000	 bit14 Refresh cycle of power stage
+// 0x2000	 bit13 Operation mode specific					Following error			Not used				Homing error
+// 0x1000	 bit12 Operation mode specific					Set-point ack			Speed					Homing attained
+// 0x0800	 bit11 not used (Internal limit active)
+// 0x0400	 bit10 Operation mode specific					Target reached			Target reached			Target reached
+// 0x0200	 bit9  Remote (NMT operational state)
+// 0x0100	 bit8  Offset current measured
+// 0x0080	 bit7  Warning
+// 0x0040	 bit6  Switch on disable
+// 0x0020	 bit5  Quick stop
+// 0x0010	 bit4  Voltage enabled (power stage on)
+// 0x0008	 bit3  Fault
+// 0x0004	 bit2  Operation enable
+// 0x0002	 bit1  Switched on
+// 0x0001	 bit0  Ready to switch on
+#define EPOS_STATUS_WORD											0x6041,	0x00  
+
+#define EPOS_MODES_OF_OPERATION									0x6060,	0x00  
+	#define	EPOS_HOMING_MODE									0x06	//  6 Homing Mode
+	#define	EPOS_PRO_VEL_MODE									0x03	//  3 Profile Velocity Mode
+	#define	EPOS_PRO_POS_MODE									0x01	//  1 Profile Position Mode
+	#define	EPOS_POS_MODE										0xFF	// -1 Position Mode
+	#define	EPOS_VEL_MODE										0xFE	// -2 Velocity Mode
+	#define	EPOS_CUR_MODE										0xFD	// -3 Current Mode
+	#define	EPOS_DIAG_MODE										0xFC	// -4 Diagnostic Mode
+	#define	EPOS_MASTER_ENC_MODE								0xFB	// -5 MasterEncoder Mode
+	#define	EPOS_STEP_DIR_MODE									0xFA	// -6 Step/Direction Mode
+
+#define EPOS_MODES_OF_OPERATION_DISPLAY							0x6061,	0x00  
+
+#define EPOS_POSITION_DEMAND_VALUE								0x6062,	0x00  
+
+#define EPOS_POSITION_ACTUAL_VALUE								0x6064,	0x00  
+
+#define EPOS_MAX_FOLLOWING_ERROR								0x6065,	0x00  
+
+#define EPOS_POSITION_WINDOW									0x6067,	0x00  
+
+#define EPOS_POSITION_WINDOW_TIME								0x6068,	0x00  
+
+#define EPOS_VELOCITY_SENSOR_ACTUAL_VALUE						0x6069,	0x00  
+
+#define EPOS_VELOCITY_DEMAND_VALUE								0x606B,	0x00  
+
+#define EPOS_VELOCITY_ACTUAL_VALUE								0x606C,	0x00  
+
+#define EPOS_CURRENT_ACTUAL_VALUE								0x6078,	0x00  
+
+#define EPOS_TARGET_POSITION									0x607A,	0x00  
+
+#define EPOS_HOME_OFFSET										0x607C,	0x00  
+
+#define EPOS_MIN_POSITION_LIMIT									0x607D,	0x01  
+#define EPOS_MAX_POSITION_LIMIT									0x607D,	0x02  
+
+#define EPOS_MAX_PROFILE_VELOCITY								0x607F,	0x00  
+
+#define EPOS_PROFILE_VELOCITY									0x6081,	0x00  
+
+#define EPOS_PROFILE_ACCELERATION								0x6083,	0x00  
+
+#define EPOS_PROFILE_DECELERATION								0x6084,	0x00  
+
+#define EPOS_QUICKSTOP_DECELERATION								0x6085,	0x00  
+
+#define EPOS_MOTION_PROFILE_TYPE								0x6086,	0x00  
+
+#define EPOS_POSITION_NOTATION_INDEX							0x6089,	0x00  
+
+#define EPOS_POSITION_DIMENSION_INDEX							0x608A,	0x00  
+
+#define EPOS_VELOCITY_NOTATION_INDEX							0x608B,	0x00  
+
+#define EPOS_VELOCITY_DIMENSION_INDEX							0x608C,	0x00  
+
+#define EPOS_ACCELERATION_NOTATION_INDEX						0x608D,	0x00  
+
+#define EPOS_ACCELERATION_DIMENSION_INDEX						0x608E,	0x00  
+
+#define EPOS_HOMING_METHOD										0x6098,	0x00  
+
+#define EPOS_SPEED_FOR_SWITCH_SEARCH							0x6099,	0x01  
+#define EPOS_SPEED_FOR_ZERO_SEARCH								0x6099,	0x02  
+
+#define EPOS_HOMING_ACCELERATION								0x609A,	0x00  
+
+#define EPOS_CURRENT_REGULATOR_P_GAIN							0x60F6,	0x01  
+#define EPOS_CURRENT_REGULATOR_I_GAIN							0x60F6,	0x02  
+
+#define EPOS_SPEED_REGULATOR_P_GAIN								0x60F9,	0x01  
+#define EPOS_SPEED_REGULATOR_I_GAIN								0x60F9,	0x02  
+
+#define EPOS_POSITION_REGULATOR_P_GAIN							0x60FB,	0x01  
+#define EPOS_POSITION_REGULATOR_I_GAIN							0x60FB,	0x02  
+#define EPOS_POSITION_REGULATOR_D_GAIN							0x60FB,	0x03  
+#define EPOS_VELOCITY_FEEDFORWARD_FACTOR						0x60FB,	0x04  
+#define EPOS_ACCELERATION_FEEDFORWARD_FACTOR					0x60FB,	0x05  
+
+#define EPOS_TARGET_VELOCITY										0x60FF,	0x00  
+
+#define EPOS_MOTOR_TYPE											0x6402,	0x00  
+
+#define EPOS_CONTINUOUS_CURRENT_LIMIT							0x6410,	0x01  
+#define EPOS_OUTPUT_CURRENT_LIMIT								0x6410,	0x02  
+#define EPOS_POLEPAIR_NUMBER									0x6410,	0x03  
+#define EPOS_MAXIMAL_SPEED_IN_CURRENTMODE						0x6410,	0x04  
+#define EPOS_THERMAL_TIME_CONSTANT_WINDING						0x6410,	0x05  
+
+#define EPOS_SUPPORTED_DRIVE_MODES								0x6502,	0x00  
+						
+#define EPOS_NODE_ID											0x2000,	0x00  
+
+#define EPOS_CAN_BITRATE										0x2001,	0x00  
+
+#define EPOS_RS232_BAUDRATE										0x2002,	0x00  
+
+#define EPOS_SOFTWARE_VERSION									0x2003,	0x01  
+#define EPOS_HARDWARE_VERSION									0x2003,	0x02  
+#define EPOS_APPLICATION_NUMBER									0x2003,	0x03  
+#define EPOS_APPLICATION_VERSION								0x2003,	0x04  
+#define EPOS_BASESECTOR_VERSION									0x2003,	0x05  
+
+#define EPOS_SERIAL_NUMBER										0x2004,	0x00  
+
+#define EPOS_RS232_FRAME_TIMEOUT								0x2005,	0x00  
+
+#define EPOS_MISCELLANEOUS_CONFIGURATION						0x2008,	0x00  
+
+#define EPOS_CUSTOM_PERSISTENT_MEMORY_1							0x200C,	0x01  
+#define EPOS_CUSTOM_PERSISTENT_MEMORY_2							0x200C,	0x02  
+#define EPOS_CUSTOM_PERSISTENT_MEMORY_3							0x200C,	0x03  
+#define EPOS_CUSTOM_PERSISTENT_MEMORY_4							0x200C,	0x04  
+
+#define EPOS_DATARECORDER_CONTROL								0x2010,	0x00  
+
+#define EPOS_DATARECORDER_CONFIGURATION							0x2011,	0x00  
+
+#define EPOS_DATARECORDER_SAMPLING_PERIOD						0x2012,	0x00  
+
+#define EPOS_DATARECORDER_NUMBER_OF_PRECEDING_SAMPLES			0x2013,	0x00  
+
+#define EPOS_DATARECORDER_NUMBER_OF_SAMPLING_VARIABLES			0x2014,	0x00  
+
+#define EPOS_DATARECORDER_INDEX_OF_VARIABLE_1					0x2015,	0x01  
+#define EPOS_DATARECORDER_INDEX_OF_VARIABLE_2					0x2015,	0x02  
+#define EPOS_DATARECORDER_INDEX_OF_VARIABLE_3					0x2015,	0x03  
+#define EPOS_DATARECORDER_INDEX_OF_VARIABLE_4					0x2015,	0x04  
+
+#define EPOS_DATARECORDER_SUBINDEX_OF_VARIABLE_1				0x2016,	0x01  
+#define EPOS_DATARECORDER_SUBINDEX_OF_VARIABLE_2				0x2016,	0x02  
+#define EPOS_DATARECORDER_SUBINDEX_OF_VARIABLE_3				0x2016,	0x03  
+#define EPOS_DATARECORDER_SUBINDEX_OF_VARIABLE_4				0x2016,	0x04  
+
+#define EPOS_DATARECORDER_STATUS								0x2017,	0x00  
+
+#define EPOS_DATARECORDER_MAX_NUMBER_OF_SAMPLES					0x2018,	0x00  
+
+#define EPOS_DATARECORDER_NUMBER_OF_RECORDED_SAMPLES			0x2019,	0x00  
+
+#define EPOS_DATARECORDER_VECTOR_START_OFFSET					0x201A,	0x00  
+
+#define EPOS_DATARECORDER_DATA_BUFFER							0x201B,	0x00  
+
+#define EPOS_ENCODER_COUNTER									0x2020,	0x00  
+
+#define EPOS_ENCODER_COUNTER_AT_INDEX_PULSE						0x2021,	0x00  
+
+#define EPOS_HALLSENSOR_PATTERN									0x2022,	0x00  
+
+#define EPOS_CURRENT_ACTUAL_VALUE_AVERAGED						0x2027,	0x00  
+
+#define EPOS_VELOCITY_ACTUAL_VALUE_AVERAGED						0x2028,	0x00  
+
+#define EPOS_CURRENTMODE_SETTING_VALUE							0x2030,	0x00  
+
+#define EPOS_POSITIONMODE_SETTING_VALUE							0x2062,	0x00  
+
+#define EPOS_VELOCITYMODE_SETTING_VALUE							0x206B,	0x00  
+
+#define EPOS_CONFIGURATION_OF_DIGITAL_INPUT1					0x2070,	0x01  
+#define EPOS_CONFIGURATION_OF_DIGITAL_INPUT2					0x2070,	0x02  
+#define EPOS_CONFIGURATION_OF_DIGITAL_INPUT3					0x2070,	0x03  
+#define EPOS_CONFIGURATION_OF_DIGITAL_INPUT4					0x2070,	0x04  
+#define EPOS_CONFIGURATION_OF_DIGITAL_INPUT5					0x2070,	0x05  
+#define EPOS_CONFIGURATION_OF_DIGITAL_INPUT6					0x2070,	0x06  
+#define EPOS_CONFIGURATION_OF_DIGITAL_INPUT7					0x2070,	0x07  
+#define EPOS_CONFIGURATION_OF_DIGITAL_INPUT8					0x2070,	0x08  
+
+#define EPOS_DIGIN_FUNCTIONALITIES_STATE						0x2071,	0x01  
+#define EPOS_DIGIN_FUNCTIONALITIES_MASK							0x2071,	0x02  
+#define EPOS_DIGIN_FUNCTIONALITIES_POLARITY						0x2071,	0x03  
+#define EPOS_DIGIN_FUNCTIONALITIES_EXECUTION MASK				0x2071,	0x04  
+
+#define EPOS_POSITION_MARKER_CAPTURED_POSITION					0x2074,	0x01  
+#define EPOS_POSITION_MARKER_EDGY_TYPE							0x2074,	0x02  
+#define EPOS_POSITION_MARKER_MODE								0x2074,	0x03  
+#define EPOS_POSITION_MARKER_COUNTER							0x2074,	0x04  
+#define EPOS_POSITION_MARKER_HISTORY_1							0x2074,	0x05  
+#define EPOS_POSITION_MARKER_HISTORY_2							0x2074,	0x06  
+
+#define EPOS_DIGOUTPUT_STATE									0x2078,	0x01  
+#define EPOS_DIGOUTPUT_MASK										0x2078,	0x02  
+#define EPOS_DIGOUTPUT_POLARITY									0x2078,	0x03  
+
+#define EPOS_CONFIGURATION_OF_DIGITAL_OUTPUT1					0x2079,	0x01  
+#define EPOS_CONFIGURATION_OF_DIGITAL_OUTPUT2					0x2079,	0x02  
+#define EPOS_CONFIGURATION_OF_DIGITAL_OUTPUT3					0x2079,	0x03  
+#define EPOS_CONFIGURATION_OF_DIGITAL_OUTPUT4					0x2079,	0x04  
+
+#define EPOS_ANALOGUE_INPUT_1									0x207C,	0x01  
+#define EPOS_ANALOGUE_INPUT_2									0x207C,	0x02  
+
+#define EPOS_CURRENT_THRESHOLD_FOR_HOMING_MODE					0x2080,	0x00  
+
+#define EPOS_HOME_POSITION										0x2081,	0x00  
+
+#define EPOS_FOLLOWING_ERROR_ACTUAL_VALUE						0x20F4,	0x00  
+
+#define EPOS_ENCODER_PULSE_NUMBER								0x2210,	0x01  
+#define EPOS_POSITION_SENSOR_TYPE								0x2210,	0x02  
+#define EPOS_POSITION_SENSOR_POLARITY							0x2210,	0x04  
+
+#define EPOS_DIGITAL_POSITION_DESIRED_VALUE						0x2300,	0x01  
+#define EPOS_DIGITAL_POSITION_SCALING_NUMERATOR					0x2300,	0x02  
+#define EPOS_DIGITAL_POSITION_SCALING_DENOMINATOR				0x2300,	0x03  
+#define EPOS_DIGITAL_POSITION_POLARITY							0x2300,	0x04  
+

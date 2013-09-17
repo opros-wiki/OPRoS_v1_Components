@@ -1,0 +1,6 @@
+; OpenGL_Manipulator.def : Declares the module parameters for the DLL.
+
+LIBRARY      "OpenGL_Manipulator"
+
+EXPORTS
+    ; Explicit exports can go here

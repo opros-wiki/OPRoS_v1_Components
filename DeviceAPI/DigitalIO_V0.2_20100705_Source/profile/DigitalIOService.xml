@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<service_port_type_profile>
+	<service_port_type>
+		<type_name>DigitalIOService</type_name>
+		<method name="SetParameter" return_type="bool" call_type="blocking">
+			<param index="1">
+				<name>parameter</name>
+				<type>Property</type>
+			</param>
+		</method>
+		<method name="GetParameter" return_type="Property" call_type="blocking" />
+		<method name="GetError" return_type="int" call_type="blocking" />
+		<method name="SetDigitalOutputData" return_type="bool" call_type="blocking">
+			<param index="1">
+				<name>digitalOutputData</name>
+				<type>vector&lt;bool&gt;</type>
+			</param>
+		</method>
+		<method name="GetDigitalInputData" return_type="vector&lt;bool&gt;" call_type="blocking" />
+	</service_port_type>
+</service_port_type_profile>
+

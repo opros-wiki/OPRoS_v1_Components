@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<component_profile>
+	<id>0c43aca8-a8b3-475f-a96d-3ed8a76ec414</id>
+	<name>DigitalIOComp</name>
+	<version>0.2</version>
+	<copyright>
+		<company>
+			<name>KITECH</name>
+			<phone />
+			<address />
+			<homepage />
+		</company>
+		<license_policy>OPRoS</license_policy>
+	</copyright>
+	<execution_environment>
+		<library_type>dll</library_type>
+		<library_name>DigitalIOComp.dll</library_name>
+		<impl_language>MSVC C++</impl_language>
+		<compiler>MSVC</compiler>
+		<app_domain />
+		<app_robot />
+	</execution_environment>
+	<execution_semantics>
+		<type>periodic</type>
+		<period>100</period>
+		<priority>5</priority>
+		<instance_creation>multiple</instance_creation>
+		<lifecycle_type>start</lifecycle_type>
+	</execution_semantics>
+	<properties>
+		<property name="DigitalInputPortSize" type="int">1</property>
+		<property name="DigitalOutputPortSize" type="int">1</property>
+	</properties>
+	<data_type_list />
+	<ports>
+		<service_port>
+			<name>DigitalIOService</name>
+			<description />
+			<type>DigitalIOService</type>
+			<usage>provided</usage>
+			<reference>DigitalIOService.xml</reference>
+		</service_port>
+		<data_port>
+			<name>digitalInputData</name>
+			<description />
+			<data_type>vector&lt;bool&gt;</data_type>
+			<usage>output</usage>
+			<reference />
+			<queueing_policy />
+			<queue_size />
+		</data_port>
+		<data_port>
+			<name>digitalOutputData</name>
+			<description />
+			<data_type>vector&lt;bool&gt;</data_type>
+			<usage>input</usage>
+			<reference />
+			<queueing_policy>LAST</queueing_policy>
+			<queue_size>1</queue_size>
+		</data_port>
+	</ports>
+</component_profile>
+
